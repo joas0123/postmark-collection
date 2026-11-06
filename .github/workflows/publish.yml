@@ -1,0 +1,59 @@
+name: 每日更新臨時郵局並發布網站
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    # UTC 00:17 = 台灣時間每日 08:17。GitHub 排程可能延遲。
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: 安裝網站資料抓取套件
+        run: pip install -r requirements.txt
+      - name: 驗證解析器
+        run: python -m unittest discover -s tests -v
+      - name: 擷取官方資料及快取郵戳圖片（失敗保留前次資料）
+        shell: bash
+        run: |
+          python scripts/update_stamps.py || echo '::warning::中華郵政網站無法擷取，保留現有清單資料並繼續發布。'
+      - name: 儲存最新資料及圖片
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/stamps.json images/ || true
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: update postal postmark data'
+            git push || echo '::warning::無法推送更新，請確認 Actions 的讀寫權限'
+          fi
+      - name: 建立網站發布資料夾（不公開程式與工作流程設定）
+        shell: bash
+        run: |
+          mkdir -p site-dist
+          cp index.html .nojekyll site-dist/
+          cp -R data images site-dist/
+          test -s site-dist/data/stamps.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: './site-dist'
+      - id: deployment
+        uses: actions/deploy-pages@v4
