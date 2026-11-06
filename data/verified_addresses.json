@@ -20,9 +20,12 @@
     "address_status": "已核對（歷史資料）"
   },
   "post-13346": {
-    "recipient": "臺南郵局集郵中心（待確認）",
-    "address": "704401 臺南市北區成功路6號2樓（待確認）",
-    "address_status": "待確認"
+    "recipient": "臺南郵局集郵中心（本場收件單位待確認）",
+    "address": "704401 臺南市北區成功路6號2樓",
+    "address_status": "中心地址已核對，本場收件單位待確認",
+    "address_source_url": "https://subservices.post.gov.tw/post/internet/Philately/index.jsp?ID=510",
+    "address_checked_at": "2026-11-06",
+    "address_note": "此為已核實的集郵中心聯絡地址。弘前市活動公告目前只列主辦局，未指定郵寄收件單位；請先向臺南成功路郵局集郵中心（06-2230586）確認後再寄件。"
   },
   "2026-11-14-5": {
     "recipient": "花蓮國安郵局集郵服務中心",
@@ -93,5 +96,21 @@
     "recipient": "三重郵局營業管理科",
     "address": "241040 新北市三重區新北大道1段17號5樓",
     "address_status": "已核對（歷史資料）"
+  },
+  "post-13351": {
+    "recipient": "新興郵局集郵服務中心",
+    "address": "800012 高雄市新興區中正三路179號1樓",
+    "address_status": "已核對官方收件單位及地址",
+    "address_source_url": "https://subservices.post.gov.tw/post/internet/Philately/index.jsp?ID=510",
+    "address_checked_at": "2026-11-06",
+    "address_note": "活動公告指定新興郵局集郵服務中心；地址已與官方集郵服務中心名錄核對。"
+  },
+  "post-13342": {
+    "recipient": "屏東民生路郵局 集郵檯",
+    "address": "900006 屏東縣屏東市民生路250號",
+    "address_status": "已核對官方收件單位及地址",
+    "address_source_url": "https://www.post.gov.tw/post/internet/I_location/post.jsp?ID=1302&prsb_no=007100-1",
+    "address_checked_at": "2026-11-06",
+    "address_note": "活動公告指定屏東民生路郵局集郵檯；地址已與官方營業據點核對。"
   }
 }
