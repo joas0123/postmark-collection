@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T15:04:13+08:00",
+  "updated_at": "2026-11-06T15:15:40+08:00",
   "update_status": "排程同步成功：本次取得 21 場，累計收錄 21 場（含歷史紀錄）",
   "source_url": "https://www.post.gov.tw/post/internet/Philately/index.jsp?ID=507",
   "items": [
@@ -60,13 +60,16 @@
       "date": "2026-11-11",
       "region": "臺南",
       "title": "2026日本弘前市文化物產嘉年華",
-      "recipient": "臺南郵局集郵中心（待確認）",
-      "address": "704401 臺南市北區成功路6號2樓（待確認）",
-      "address_status": "待確認",
+      "recipient": "臺南郵局集郵中心（本場收件單位待確認）",
+      "address": "704401 臺南市北區成功路6號2樓",
+      "address_status": "中心地址已核對，本場收件單位待確認",
       "image_url": "images/cache/dc19d3113e4ce6e1fb68.jpg",
       "official_url": "https://www.post.gov.tw/post/internet/Philately/sz_stampmark_dtl.jsp?temp_sn=13346&ID=507",
       "venue_note": "臺南市東區前鋒路210號台南大遠百5F（主辦局：臺南郵局）（局贈封：無）（11時至14時）",
-      "source_description": "中華郵政臨時郵局戳圖公告"
+      "source_description": "中華郵政臨時郵局戳圖公告",
+      "address_source_url": "https://subservices.post.gov.tw/post/internet/Philately/index.jsp?ID=510",
+      "address_checked_at": "2026-11-06",
+      "address_note": "此為已核實的集郵中心聯絡地址。弘前市活動公告目前只列主辦局，未指定郵寄收件單位；請先向臺南成功路郵局集郵中心（06-2230586）確認後再寄件。"
     },
     {
       "id": "2026-11-14-5",
@@ -256,12 +259,15 @@
       "region": "高雄",
       "title": "聖誕郵你熊厚2",
       "recipient": "新興郵局集郵服務中心",
-      "address": "",
-      "address_status": "僅列收件單位，地址待確認",
+      "address": "800012 高雄市新興區中正三路179號1樓",
+      "address_status": "已核對官方收件單位及地址",
       "image_url": "images/cache/29a8082ec2e5ab5efdc1.jpg",
       "official_url": "https://www.post.gov.tw/post/internet/Philately/sz_stampmark_dtl.jsp?temp_sn=13351&ID=507",
       "venue_note": "新興郵局集郵服務中心（郵件請寄新興郵局集郵服務中心）(主辦局:高雄郵局)(局贈封:自印小型封)(9時至12時)",
-      "source_description": "中華郵政臨時郵局戳圖公告"
+      "source_description": "中華郵政臨時郵局戳圖公告",
+      "address_source_url": "https://subservices.post.gov.tw/post/internet/Philately/index.jsp?ID=510",
+      "address_checked_at": "2026-11-06",
+      "address_note": "活動公告指定新興郵局集郵服務中心；地址已與官方集郵服務中心名錄核對。"
     },
     {
       "id": "post-13342",
@@ -269,12 +275,15 @@
       "region": "屏東",
       "title": "屏東風域曙光路跑",
       "recipient": "屏東民生路郵局 集郵檯",
-      "address": "",
-      "address_status": "僅列收件單位，地址待確認",
+      "address": "900006 屏東縣屏東市民生路250號",
+      "address_status": "已核對官方收件單位及地址",
       "image_url": "images/cache/067238655b841d613165.jpg",
       "official_url": "https://www.post.gov.tw/post/internet/Philately/sz_stampmark_dtl.jsp?temp_sn=13342&ID=507",
       "venue_note": "佳樂水風景區(售票處旁停車場貨櫃屋)（郵件請寄:屏東民生路郵局 集郵檯）(主辦局:屏東郵局)(局贈封:無)(4時至11時)",
-      "source_description": "中華郵政臨時郵局戳圖公告"
+      "source_description": "中華郵政臨時郵局戳圖公告",
+      "address_source_url": "https://www.post.gov.tw/post/internet/I_location/post.jsp?ID=1302&prsb_no=007100-1",
+      "address_checked_at": "2026-11-06",
+      "address_note": "活動公告指定屏東民生路郵局集郵檯；地址已與官方營業據點核對。"
     }
   ]
 }
