@@ -255,6 +255,10 @@ def main():
         if override:
             for field in ('recipient','address','address_status'):
                 if override.get(field):item[field]=override[field]
+        # A migrated JSON may reference a cache file not present in this checkout.
+        # Re-fetch its official detail image rather than silently dropping the picture.
+        if item.get('image_url', '').startswith('images/') and not (ROOT / item['image_url']).is_file():
+            item['image_url'] = ''
         if not item['image_url'] and 'sz_stampmark_dtl' in item['official_url']:
             try:item['image_url']=picture_from_html(get(item['official_url']),item['official_url'])
             except Exception as ex:print(f'  [詳情頁無法開啟] {ex}')
@@ -274,3 +278,4 @@ def main():
     print(f'更新完成：{len(items)} 筆')
 
 if __name__=='__main__':main()
+
