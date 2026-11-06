@@ -253,7 +253,7 @@ def main():
                 item['id']=prev['id']
         override=verified.get(item['id'])
         if override:
-            for field in ('recipient','address','address_status'):
+            for field in ('recipient','address','address_status','address_source_url','address_checked_at','address_note'):
                 if override.get(field):item[field]=override[field]
         # A migrated JSON may reference a cache file not present in this checkout.
         # Re-fetch its official detail image rather than silently dropping the picture.
